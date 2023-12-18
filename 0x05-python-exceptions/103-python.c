@@ -10,7 +10,7 @@ void print_python_bytes_info(PyObject *py_object) {
   char *byte_string;
   Py_ssize_t byte_size, i, limit;
 
-  // Disable buffering for immediate output.
+
   setbuf(stdout, NULL);
 
   printf("[*] Byte object details:\n");
@@ -47,7 +47,7 @@ void print_python_float_info(PyObject *py_object) {
   double float_value;
   char *formatted_string;
 
-  // Disable buffering for immediate output.
+  
   setbuf(stdout, NULL);
 
   printf("[*] Float object details:\n");
@@ -75,7 +75,7 @@ void print_python_list_info(PyObject *py_object) {
   PyObject *list_item;
   PyListObject *py_list = (PyListObject *)py_object;
 
-  // Disable buffering for immediate output.
+  
   setbuf(stdout, NULL);
 
   printf("[*] Python list information:\n");
