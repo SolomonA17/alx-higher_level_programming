@@ -1,3 +1,7 @@
 #!/usr/bin/python3
-class Square(object):
+"""Square class defination"""
+
+
+class Square:
+    """Square class body"""
     pass
