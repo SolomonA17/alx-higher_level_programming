@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <wchar.h>
 #include <locale.h>
-#include <python.h>
 #include <unicodeobject.h>
+#include <python.h>
 
 /**
  * print_python_string - Prints information about Python strings.
