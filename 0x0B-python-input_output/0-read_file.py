@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-def read_file(filename=""):
-    """ read-file print the file content
-    Args:
-        filename (path): file path
+"""The read_file function container"""
 
-    Returns:
-        Nothing
-    """
-    with open(filename, encoding='utf-8') as file:
-        print(file.read(), end="")
+
+def read_file(filename=""):
+    """""reads a text file(UTF8) and prints it to stdout"""
+    with open(filename, "r", encoding="utf-8") as file:
+        files = file.read()
+        print(files, end="")
