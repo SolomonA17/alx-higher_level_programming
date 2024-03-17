@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """adds the State object “California”
 with the City “San Francisco”

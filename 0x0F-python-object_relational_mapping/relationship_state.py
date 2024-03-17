@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """Improved model.states"""
 from sqlalchemy import Column, Integer, String

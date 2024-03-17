@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """Improved model.city"""
 from sqlalchemy import Column, ForeignKey, Integer, String
