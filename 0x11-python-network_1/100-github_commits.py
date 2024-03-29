@@ -1,18 +1,21 @@
 #!/usr/bin/python3
-"""Listing 10 commits in a repo"""
+"""Lists the 10 most recent commits on a given GitHub repository.
+Usage: ./100-github_commits.py <repository name> <repository owner>
+"""
+import sys
+import requests
 
-if __name__ == '__main__':
-    import sys
-    import requests
 
-    url = 'https://api.github.com/repos/{}/{}/commits'.format(
+if __name__ == "__main__":
+    url = "https://api.github.com/repos/{}/{}/commits".format(
         sys.argv[2], sys.argv[1])
-    try:
-        response = requests.get(url)
-        res_dict = response.json()
-        for i in range(0, 10):
-            print("{}: {}".format(res_dict[i].get('sha'), res_dict[i].get(
-                'commit').get('author').get('name')))
-    except Exception:
-        pass
 
+    r = requests.get(url)
+    commits = r.json()
+    try:
+        for i in range(10):
+            print("{}: {}".format(
+                commits[i].get("sha"),
+                commits[i].get("commit").get("author").get("name")))
+    except IndexError:
+        pass
